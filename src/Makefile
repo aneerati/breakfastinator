@@ -1,10 +1,11 @@
 CC = gcc
+EXEC = breakfastinator
 
-breakfastinator: main.o
+$(EXEC): main.o
 	$(CC) main.o -o breakfastinator
 
 main.o: main.c
 	$(CC) -c main.c
 
 clean:
-	rm *.o breakfastinator
+	rm *.o $(EXEC)
